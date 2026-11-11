@@ -1,13 +1,6 @@
 
-from datetime import date, datetime
 from csv_reader import read_csv_rows
-
-
-def parse_date(value: str) -> date:
-    try:
-        return date.fromisoformat(value)
-    except ValueError:
-        return datetime.strptime(value, "%d.%m.%Y").date()
+from dates import parse_date
 
 
 def load_people(path: str) -> list[dict]:
@@ -26,5 +19,3 @@ def load_people(path: str) -> list[dict]:
 
     return people
 
-
-people = load_people("data/people_start.csv")
