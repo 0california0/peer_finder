@@ -3,3 +3,8 @@
 2. Finde Gruppen von Personen, die am gleichen Geburtstag Geburtstag haben.
 
 ### Rollen
+0california0 - Owner
+zelonaa - Softwaredeveloper
+migeli - Softwaredeveloper
+Mel2466 - Test/Review
+AlestairLuca - Test/Review
