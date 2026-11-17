@@ -1,6 +1,6 @@
 import pytest
-from people.py import load_people
 from datetime import date
+from birthday_projekt.people import load_people
 
 def test_load_people_default():
     assert load_people(r"peer_finder\tests\test_data\default.csv") == {"id": 1001, "name": "Anna Keller", "birthdate": date(2001, 9, 14)}
