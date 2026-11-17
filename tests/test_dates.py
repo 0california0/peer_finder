@@ -15,7 +15,7 @@ def test_parse_date_default_with_zero():
     assert parse_date("1.1.2001") == date(2001, 1, 1)
 
 def test_parse_date_leap_year():
-    assert parse_date("28.02.2024") == date(2024, 2, 28)
+    assert parse_date("29.02.2024") == date(2024, 2, 29)
 
 def test_parse_date_valid_format():
     with pytest.raises(ValueError):
