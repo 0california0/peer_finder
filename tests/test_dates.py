@@ -1,6 +1,6 @@
 import pytest
-from dates.py import parse_date
 from datetime import date
+from birthday_projekt.dates import parse_date
 
 def test_parse_date_both_formats():
     assert parse_date("2002-04-01") == parse_date("01.04.2002")
