@@ -1,3 +1,5 @@
+from collections import defaultdict
+
 def find_age_neighbors(people, n=10):
     neighbors = {}
 
@@ -16,3 +18,19 @@ def find_age_neighbors(people, n=10):
         neighbors[first_person['id']] = ids
 
     return neighbors
+
+
+def find_birthday_groups(people): 
+    birthday_groups = defaultdict(list)
+
+    for person in people:
+        birthdate = person["birthdate"]
+        birthday_key = (birthdate.month, birthdate.day)
+        birthday_groups[birthday_key].append(person["id"])
+
+    groups = {}
+    for birthday, ids in birthday_groups.items():
+        if len(ids) > 1:
+            groups[birthday] = sorted(ids)
+
+    return groups
